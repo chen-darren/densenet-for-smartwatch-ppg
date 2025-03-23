@@ -3,8 +3,6 @@ Darren, last edit 03/22/2025.
 
 This branch contains the pretrained DenseNet models, source code, and data loading documentation for Darren Chen's Honors Undergraduate Thesis, titled **"Application of Deep Learning and Data Balancing Methods for Multiclass Cardiac Rhythm Detection and Classification Using Real-World Smartwatch Photoplethysmography"** at the **University of Connecticut**.  
 
-The study focuses on the **Pulsewatch dataset** to develop and evaluate deep learning models for detecting and classifying various cardiac rhythms using real-world smartwatch PPG data. 
-
 Keywords:
 - PPG: photoplethysmography
 - AF: atrial fibrilaltion
