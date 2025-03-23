@@ -50,23 +50,23 @@ Set the desired run parameters
 
 #### Synthetic Upsampling
 `smote_type`
-- String describing the type of smote (SMOTE, Borderline SMOTE, and ADASYN)
+- String describing the type of smote (SMOTE, Borderline SMOTE, and ADASYN).
 
 `split`
-- String describing how the data was split ('holdout_60_10_30')
+- String describing how the data was split ('holdout_60_10_30').
 
 #### Combined Datasets
 `combination`
 - String describing the type of combined dataset (i.e. 'combined_dataset', 'pulsewatch_simband', 'simband_mimic3').
 
 `split`
-- String describing how the data was split ('multiclass')
+- String describing how the data was split ('multiclass').
 
 #### Database
 If you are using another database (e.g. DeepBeat, Simband, or MIMIC III)...
 
 `database`
-- String text of common ways to name the databases
+- String text of common ways to name the databases.
 
 #### Data and Image Settings
 `img_res`
@@ -99,10 +99,10 @@ If you are using another database (e.g. DeepBeat, Simband, or MIMIC III)...
 - Keep at torch.float32 as the inital dtype as mixed precision is being used for actual running of the model.
 
 `save`
-- Boolean describing whether or not the model should save its results
+- Boolean describing whether or not the model should save its results.
 
 `data_format`
-- 'csv' or 'pt'...strongly suggest using 'pt' for fastest model
+- 'csv' or 'pt'...strongly suggest using 'pt' for fastest model.
 
 `n_epochs`
 - Int value for the number of epochs to run.
@@ -117,17 +117,17 @@ All split functions return three lists of UIDs for the training, validation, and
 - Original split
 
 `dataloader.split_uids_60_10_30(pathmaster)`
-- Holdout 60:10:30 with respect to the number of PAC/PVC segments for all classes (undersampled NSR and AF)
+- Holdout 60:10:30 with respect to the number of PAC/PVC segments for all classes (undersampled NSR and AF).
 
 `dataloader.split_uids_60_10_30_smote(pathmaster)`
-- Holdout 60:10:30 with respect to number of segments and subjects for all classes (no undersampling)
-- Used for generation of synthetic samples and for use with class weights
+- Holdout 60:10:30 with respect to number of segments and subjects for all classes (no undersampling).
+- Used for generation of synthetic samples and to manually calculate class weights.
 
 `dataloader.split_uids_60_10_30_balanced(pathmaster)`
-- Holdout 60:10:30 with respect to number of segments and subjects for all classes, but the training set has the majority classes downsampled to achieve a balanced training set
+- Holdout 60:10:30 with respect to number of segments and subjects for all classes, but the training set has the majority classes downsampled to achieve a balanced training set.
 
 `dataloader.split_uids_60_10_30_noPACPVC(pathmaster)`
-- Holdout 60:10:30 split with respect to the number of segments and subjects with respect to NSR and AF (no PAC/PVC)
+- Holdout 60:10:30 split with respect to the number of segments and subjects with respect to NSR and AF (no PAC/PVC).
 
 ### Preprocess Data and Prepare Dataloaders
 `dataloader.preprocess_data(args)`
