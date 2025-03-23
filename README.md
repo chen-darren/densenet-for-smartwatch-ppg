@@ -15,15 +15,15 @@ This repository contains the pretrained DenseNet models, source code, and data l
   This version corresponds to Darren Chen's Honors Undergraduate Thesis, titled:  
   *"Application of Deep Learning and Data Balancing Methods for Multiclass Cardiac Rhythm Detection and Classification Using Real-World Smartwatch Photoplethysmography"* at the **University of Connecticut**.
 
-Keywords:
+## Keywords:
 
 PPG: photoplethysmography
 AF: atrial fibrilaltion
 PAC/PVC or PAC_PVC: premature atrial and ventricular contractions
 NSR: normal sinus rhythm
-The study focuses on the Pulsewatch dataset to develop and evaluate deep learning models for detecting and classifying various cardiac rhythms using real-world smartwatch PPG data. This work strongly builds upon the DenseNet architecture and extends its application to cardiac rhythm classification using real-world smartwatch PPG data.
 
-The study focuses on the **Pulsewatch dataset** to develop and evaluate deep learning models for detecting and classifying various cardiac rhythms using real-world smartwatch PPG data. This work strongly builds upon the DenseNet architecture and extends its application to cardiac rhythm classification using real-world smartwatch PPG data.  
+## Description
+The study focuses on the Pulsewatch dataset to develop and evaluate deep learning models for detecting and classifying various cardiac rhythms using real-world smartwatch PPG data. This work strongly builds upon the DenseNet architecture and extends its application to cardiac rhythm classification using real-world smartwatch PPG data.
 - DenseNet Repository: [DenseNet by Zhuang Liu](https://github.com/liuzhuang13/DenseNet)  
 - **For reference:**
     - G. Huang, Z. Liu, L. van der Maaten, and K. Q. Weinberger, “Densely Connected Convolutional Networks,” Jan. 28, 2018, arXiv: arXiv:1608.06993. doi: 10.48550/arXiv.1608.06993.
