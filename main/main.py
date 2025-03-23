@@ -4,26 +4,7 @@ Created on Wed Feb 28 12:52:53 2024
 
 @author: dchen
 """
-""" ** Highly suggest always use data_format = 'pt' for minimum training time
-    To run any saved model do the following:
-        1. Change the file_tag and focus in main() in main.py to the model you would like to run
-        2. If need be, set is_linux, is_hpc, is_internal, is_external in main() to the correct value
-        3. Set is_tfs, model_type, and data_type in main() to correct value
-        4. Also change img_size and img_res appropriately (if pt, make sure that they match)
-        5. Run main()
-    To run only the validation/testing in main() do the following:
-        1. Comment out "# Training and validation..." to "...print('\nTraining and validation took %.2f' % time_passed, 'hours')"
-        2. Follow the steps to run any saved model from above
-    If you want to use Poincare Density instead of TFS, do the following:
-        1. Set is_tfs=False in main()
-        2. Set img_res in main() to correct value
-        3. Set data_type in main() to correct value
-    If you want to use SMOTE
-        1. Set smote_type in main()
-        2. Set split in main()
-        3. Choose the correct dataloader_smote.preprocess_data()
-        
-"""
+
 import torch
 import torch.nn as nn
 import time
