@@ -1,5 +1,5 @@
 # Pretrained Models
-Darren, last edit 03/22/2025.
+Darren, last edit 03/23/2025.
 
 ## Checkpoints
 Contains the `checkpoint_model_name.pt` files of each pretrained model.
