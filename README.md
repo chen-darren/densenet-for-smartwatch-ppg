@@ -12,8 +12,8 @@ Keywords:
 The study focuses on the **Pulsewatch dataset** to develop and evaluate deep learning models for detecting and classifying various cardiac rhythms using real-world smartwatch PPG data. This work strongly builds upon the DenseNet architecture and extends its application to cardiac rhythm classification using real-world smartwatch PPG data.  
 
 - DenseNet Repository: [DenseNet by Zhuang Liu](https://github.com/liuzhuang13/DenseNet)  
-- Citation:  
-  [1] G. Huang, Z. Liu, L. van der Maaten, and K. Q. Weinberger, **"Densely Connected Convolutional Networks,"** *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*, 2017.
+- For reference, see:
+    - G. Huang, Z. Liu, L. van der Maaten, and K. Q. Weinberger, **"Densely Connected Convolutional Networks,"** *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition*, 2017.
 
 This project also builds upon and extends previous research on Pulsewatch. For more information, please refer to the Pulsewatch repository maintained by my postdoc mentor: [PulsewatchRelease](https://github.com/Cassey2016/PulsewatchRelease.git). 
 
