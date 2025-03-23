@@ -160,7 +160,7 @@ Set desired hyperparameters in `config`.
 - `learning_rate`: learning rate for the Adam optimizer
 - `lambda_l1`: lambda for L1 regularization
 - `activation`: activation function
-    - ReLU, LeakyReLU, Sigmoid, Tanh, Softmax, Softplus, Softshrink, Softmin, LogSoftmax, ELU, PreLU, ReLU6, RReLU, CELU, SELU, GELU&, SiLU
+    - ReLU, LeakyReLU, Sigmoid, Tanh, Softmax, Softplus, Softshrink, Softmin, LogSoftmax, ELU, PreLU, ReLU6, RReLU, CELU, SELU, GELU, and SiLU
 
 ### Training, Validation, and Testing
 If you want to train, validate, and test, simply run the Python script after setting all of the configurables and ensuring all paths are correct.
