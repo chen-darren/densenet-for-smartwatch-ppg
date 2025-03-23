@@ -18,7 +18,7 @@ The study focuses on the **Pulsewatch dataset** to develop and evaluate deep lea
 - For reference, see:
     - G. Huang, Z. Liu, L. van der Maaten, and K. Q. Weinberger, “Densely Connected Convolutional Networks,” Jan. 28, 2018, arXiv: arXiv:1608.06993. doi: 10.48550/arXiv.1608.06993.
 
-This project also builds upon and extends previous research on Pulsewatch. For more information, please refer to the Pulsewatch repository maintained by my postdoc mentor: [PulsewatchRelease](https://github.com/Cassey2016/PulsewatchRelease.git). 
+This project also builds upon and extends previous research on Pulsewatch. For more information, please refer to the Pulsewatch repository maintained by my postdoc mentor, Dr. Dong (Cassey) Han: [PulsewatchRelease](https://github.com/Cassey2016/PulsewatchRelease.git). 
 
 ## Training, Validating, and/or Testing Model
 - Go to the `README.md` file in the `main` folder.
