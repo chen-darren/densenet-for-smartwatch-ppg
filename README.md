@@ -9,13 +9,14 @@ Keywords:
 - PAC/PVC or PAC_PVC: premature atrial and ventricular contractions
 - NSR: normal sinus rhythm
 
-The study focuses on the **Pulsewatch dataset** to develop and evaluate deep learning models for detecting and classifying various cardiac rhythms using real-world smartwatch PPG data. This work strongly builds upon the DenseNet architecture and extends its application to cardiac rhythm classification using real-world smartwatch PPG data.  
+This study focuses on the **Pulsewatch** dataset to develop and evaluate deep learning models for detecting and classifying various cardiac rhythms using real-world smartwatch PPG data. This work strongly builds upon the **DenseNet** architecture and extends its application to cardiac rhythm classification using real-world smartwatch PPG data.
 
-- DenseNet Repository: [DenseNet by Zhuang Liu](https://github.com/liuzhuang13/DenseNet)  
-- For reference, see:
-    - G. Huang, Z. Liu, L. van der Maaten, and K. Q. Weinberger, “Densely Connected Convolutional Networks,” Jan. 28, 2018, arXiv: arXiv:1608.06993. doi: 10.48550/arXiv.1608.06993.
+- **DenseNet Repository:** [DenseNet by Zhuang Liu](https://github.com/liuzhuang13/DenseNet)  
+- **For reference:**  
+    G. Huang, Z. Liu, L. van der Maaten, and K. Q. Weinberger, “Densely Connected Convolutional Networks,” Jan. 28, 2018, arXiv: arXiv:1608.06993. doi: [10.48550/arXiv.1608.06993](https://doi.org/10.48550/arXiv.1608.06993).
 
-This project also builds upon and extends previous research on Pulsewatch. For more information, please refer to the Pulsewatch repository maintained by my postdoc mentor, Dr. Dong (Cassey) Han: [PulsewatchRelease](https://github.com/Cassey2016/PulsewatchRelease.git).
+This project also builds upon and extends previous research on **Pulsewatch**. For more information, please refer to the Pulsewatch repository maintained by my postdoc mentor, Dr. Dong (Cassey) Han:  
+[PulsewatchRelease](https://github.com/Cassey2016/PulsewatchRelease.git).
 
 ## Training, Validating, and/or Testing Model
 - Go to the `README.md` file in the `main` folder.
