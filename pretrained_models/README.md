@@ -18,5 +18,5 @@ Trained and validated on the holdout 60:10:30 split of Pulsewatch data for binar
 ### Proposed_Model_Combined Multiclass
 Trained and validated on the combined dataset of holdout 60:10:30 splits of the Pulsewatch, Simband, and MIMIC-III datasets for multiclass (NSR, AF, PAC/PVC) classification.
 
-### Proposed_Model_Combined Multiclass
+### Proposed_Model_Combined Binary
 Trained and validated on the combined dataset of holdout 60:10:30 splits of the Pulsewatch, Simband, and MIMIC-III datasets for binary (non-AF: NSR + PAC/PVC, AF) classification.
