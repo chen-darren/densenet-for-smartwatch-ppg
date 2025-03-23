@@ -1,0 +1,3 @@
+num_layers_per_dense,growth_rate,compression,bottleneck,drop_rate,class_weights,learning_rate,lambda_l1,activation
+4,16,0.8,FALSE,0.1,1.300372200335198,2.15443469003188e-05,7.74263682681127e-05,gelu
+,,,,,4.329202898550725,,,
