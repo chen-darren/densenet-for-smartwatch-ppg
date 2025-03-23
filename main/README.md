@@ -1,5 +1,5 @@
 # Multiclass Classifcation of NSR, AF, and PAC/PVC Using a DenseNet Model 
-Darren, last edit 03/22/2025.
+Darren, last edit 03/23/2025.
 
 ## Ensure Correct Paths for Your Device
 Open `pathmaster.py` in the `utils` subdirectory
@@ -10,7 +10,7 @@ Open `pathmaster.py` in the `utils` subdirectory
     - Go to `data_paths(args)`
     - Set the correct `base_path` and `labels_base_path` for each platform and ensure that the data_paths exist for each data format
 - Other data paths
-    - If you are using synthetic upsampling or other databases, ensure that the respective paths functions are correct
+    - If you are using other databases, ensure that the respective paths functions are correct
 - Create all relevant saves directories based on the specific saves paths functions
 - See README at `densenet-for-smartwatch-ppg\utils\README.md` for more information about paths and PathMaster.
 
@@ -47,10 +47,6 @@ Set the desired run parameters
 
 `file_tag`
 - A string identifier for the specific run under a single focus (i.e. 'random_search_0', 'random_search_1', 'Proposed_Model', 'Pulsewatch', etc.).
-
-#### Synthetic Upsampling
-`smote_type`
-- String describing the type of smote (SMOTE, Borderline SMOTE, and ADASYN)
 
 `split`
 - String describing how the data was split ('holdout_60_10_30')
@@ -117,24 +113,20 @@ All split functions return three lists of UIDs for the training, validation, and
 - Original split
 
 `dataloader.split_uids_60_10_30(pathmaster)`
-- Holdout 60:10:30 with respect to the number of PAC/PVC segments for all classes (undersampled NSR and AF)
+- Holdout 60:10:30 with respect to the number of PAC/PVC segments for all classes (undersampled NSR and AF).
 
-`dataloader.split_uids_60_10_30_smote(pathmaster)`
-- Holdout 60:10:30 with respect to number of segments and subjects for all classes (no undersampling)
-- Used for generation of synthetic samples and for use with class weights
+`dataloader.split_uids_60_10_30_v2(pathmaster)`
+- Holdout 60:10:30 with respect to number of segments and subjects for all classes (no undersampling).
+- Used to manually calculate class weights.
 
 `dataloader.split_uids_60_10_30_balanced(pathmaster)`
-- Holdout 60:10:30 with respect to number of segments and subjects for all classes, but the training set has the majority classes downsampled to achieve a balanced training set
+- Holdout 60:10:30 with respect to number of segments and subjects for all classes, but the training set has the majority classes downsampled to achieve a balanced training set.
 
 `dataloader.split_uids_60_10_30_noPACPVC(pathmaster)`
-- Holdout 60:10:30 split with respect to the number of segments and subjects with respect to NSR and AF (no PAC/PVC)
+- Holdout 60:10:30 split with respect to the number of segments and subjects with respect to NSR and AF (no PAC/PVC).
 
 ### Preprocess Data and Prepare Dataloaders
 `dataloader.preprocess_data(args)`
-- Returns holdout training, validation, and test loaders.
-
-### Preprocess Data and Prepare Dataloaders for Synthetic Upsampling
-`dataloader_smote.preprocess_data(args)`
 - Returns holdout training, validation, and test loaders.
 
 ### Preprocess Data and Prepare Dataloaders for Other Databases
@@ -160,7 +152,7 @@ Set desired hyperparameters in `config`.
 - `learning_rate`: learning rate for the Adam optimizer
 - `lambda_l1`: lambda for L1 regularization
 - `activation`: activation function
-    - ReLU, LeakyReLU, Sigmoid, Tanh, Softmax, Softplus, Softshrink, Softmin, LogSoftmax, ELU, PreLU, ReLU6, RReLU, CELU, SELU, GELU&, SiLU
+    - ReLU, LeakyReLU, Sigmoid, Tanh, Softmax, Softplus, Softshrink, Softmin, LogSoftmax, ELU, PreLU, ReLU6, RReLU, CELU, SELU, GELU, and SiLU
 
 ### Training, Validation, and Testing
 If you want to train, validate, and test, simply run the Python script after setting all of the configurables and ensuring all paths are correct.

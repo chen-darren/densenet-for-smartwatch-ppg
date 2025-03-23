@@ -90,7 +90,7 @@ def split_uids_60_10_30(pathmaster):
     return train_set, val_set, test_set
     
 
-def split_uids_60_10_30_smote(pathmaster):
+def split_uids_60_10_30_v2(pathmaster):
     # ====== Load the per subject arrythmia summary ======
     file_path = pathmaster.summary_path()
     # df_summary = pd.read_csv(file_path)

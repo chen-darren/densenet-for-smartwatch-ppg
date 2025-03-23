@@ -128,27 +128,7 @@ class PathMaster():
         return data_path, labels_path
     
     
-    def smote_path(self, smote_type, split): # Can also be used for other combined datasets
-        if self.is_internal:
-            root_path = r'C:\Chon_Lab\NIH_Pulsewatch'
-        elif self.is_external:
-            root_path = r'D:\Chon_Lab\NIH_Pulsewatch'
-        else:
-            # R:\ENGR_Chon\Dong\MATLAB_generate_results\NIH_PulseWatch
-            root_path = "R:\ENGR_Chon\Darren\\NIH_Pulsewatch" # Why double \\ before NIH_Pulsewatch_Database?
-
-        # Type path
-        if self.is_tfs:
-            format_path = 'TFS_pt'
-        else:
-            format_path = 'Poincare_pt'
-        
-        smote_path = os.path.join(root_path, format_path, smote_type, split)
-        
-        return smote_path
-    
-    
-    def combination_path(self, combination, split): # Can also be used for other combined datasets
+    def combination_path(self, combination, split):
         if self.is_internal:
             root_path = r'C:\Chon_Lab\NIH_Pulsewatch'
         elif self.is_external:

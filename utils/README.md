@@ -1,5 +1,5 @@
 # Configuring Paths for PathMaster
-Darren, last edit 03/22/2025.
+Darren, last edit 03/23/2025.
 
 ## Adjust All Specific Paths
 Only change specific string paths.
@@ -19,12 +19,6 @@ Only change specific string paths.
 - Root directory for where the labels are stored
     - Everything works if the same as `data_root_path`. If different, somethings may not work...
 - Note that this directory will branch into the `Ground_Truth` subdirectory which contains individual CSVs for each UID, each CSV containins the segment names and corresponding labels of each segment for that UID.
-
-### `smote_path()`
-`root_path`
-- Root directory for where the SMOTE'd data should be saved.
-    - Everything works if the same as `data_root_path`. If different, somethings may not work...
-- Note that this directory will branch into the `format_path` subdirectories (i.e. 'TFS_pt') which then branch into the `smote_type` subdirectories (i.e. 'SMOTE, Borderline_SMOTE, 'ADASYN') which then branch into the `split` subdirectory (i.e. 'holdout_60_10_30').
 
 ### `combination_path()`
 `root_path`

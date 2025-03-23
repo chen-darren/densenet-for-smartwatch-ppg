@@ -40,8 +40,7 @@ def load_data(binary, dataset, pathmaster):
     
     if dataset == 'pulsewatch' or dataset == 'Pulsewatch':
         # Split UIDs
-        train_set, val_set, test_set = dataloader.split_uids_60_10_30_smote(pathmaster)
-        # train_set, val_set, test_set = dataloader.split_uids_60_10_30_v2(pathmaster)
+        train_set, val_set, test_set = dataloader.split_uids_60_10_30_v2(pathmaster)
         # train_set, val_set, test_set = dataloader.split_uids_60_10_30_noNSR(pathmaster)
         
         # Data loaders
@@ -51,7 +50,7 @@ def load_data(binary, dataset, pathmaster):
         train_loader, val_loader = dataloader_combined.preprocess_data('combined_dataset', 'multiclass', batch_size, standardize, img_channels, img_size,
                                                                        downsample, data_type, pathmaster, binary)
         # Split UIDs
-        train_set, val_set, test_set = dataloader.split_uids_60_10_30_smote(pathmaster)
+        train_set, val_set, test_set = dataloader.split_uids_60_10_30_v2(pathmaster)
         _, _, test_loader = dataloader.preprocess_data(data_format, train_set, val_set, test_set, 
                                                        batch_size, standardize, False, img_channels, img_size, downsample, data_type, pathmaster, binary)
     else:

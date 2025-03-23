@@ -4,26 +4,6 @@ Created on Wed Feb 28 12:52:53 2024
 
 @author: dchen
 """
-""" ** Highly suggest always use data_format = 'pt' for minimum training time
-    To run any saved model do the following:
-        1. Change the file_tag and focus in main() in main.py to the model you would like to run
-        2. If need be, set is_linux, is_hpc, is_internal, is_external in main() to the correct value
-        3. Set is_tfs, model_type, and data_type in main() to correct value
-        4. Also change img_size and img_res appropriately (if pt, make sure that they match)
-        5. Run main()
-    To run only the validation/testing in main() do the following:
-        1. Comment out "# Training and validation..." to "...print('\nTraining and validation took %.2f' % time_passed, 'hours')"
-        2. Follow the steps to run any saved model from above
-    If you want to use Poincare Density instead of TFS, do the following:
-        1. Set is_tfs=False in main()
-        2. Set img_res in main() to correct value
-        3. Set data_type in main() to correct value
-    If you want to use SMOTE
-        1. Set smote_type in main()
-        2. Set split in main()
-        3. Choose the correct dataloader_smote.preprocess_data()
-        
-"""
 import torch
 import torch.nn as nn
 import time
@@ -37,7 +17,6 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from utils.pathmaster import PathMaster
 import utils.model_func as model_func
 import utils.dataloader as dataloader
-import utils.dataloader_smote as dataloader_smote
 import utils.dataloader_database as dataloader_database
 import utils.dataloader_combined as dataloader_combined
 
@@ -55,12 +34,7 @@ def main():
     # Input
     is_tfs = True
     
-    # # SMOTE specifics
-    # smote_type = '5k_SMOTE'
-    smote_type = 'Borderline5k_SMOTE'
-    # smote_type = 'ADASYN5k'
-    # split = 'holdout_60_10_30'
-    
+    # Dataset combination specifics
     combination = 'combined_dataset'
     split = 'multiclass'
     
@@ -74,7 +48,6 @@ def main():
     focus = 'thesis_results_final_pulsewatch_multiclass'
     
     # Initialize the file tag
-    # file_tag = '6k_smote_holdout_60_10_30'
     # file_tag = 'misc'
     # file_tag = 'batch64_worker6_prefetch2_epoch20'
     file_tag = 'Proposed_Model'
@@ -120,7 +93,7 @@ def main():
     # Split UIDs
     # train_set, val_set, test_set = dataloader.split_uids(pathmaster)
     # train_set, val_set, test_set = dataloader.split_uids_60_10_30(pathmaster)
-    train_set, val_set, test_set = dataloader.split_uids_60_10_30_smote(pathmaster)
+    train_set, val_set, test_set = dataloader.split_uids_60_10_30_v2(pathmaster)
     # train_set, val_set, test_set = dataloader.split_uids_60_10_30_balanced(pathmaster)
     # train_set, val_set, test_set = dataloader.split_uids_60_10_30_noPACPVC(pathmaster)
     
@@ -128,17 +101,13 @@ def main():
     data_format = 'pt'
     batch_size = 256
     
-    # # Preprocess data (non-SMOTE)
+    # # Preprocess data (general)
     # train_loader, val_loader, _ = dataloader.preprocess_data(data_format, train_set, val_set, test_set, 
     #                                               batch_size, standardize, False, img_channels, img_size, downsample, data_type, pathmaster, binary)
     train_loader, val_loader, test_loader = dataloader.preprocess_data(data_format, train_set, val_set, test_set, 
                                                   batch_size, standardize, False, img_channels, img_size, downsample, data_type, pathmaster, binary)
     # _, _, test_loader = dataloader.preprocess_data(data_format, train_set, val_set, test_set, 
     #                                               batch_size, standardize, False, img_channels, img_size, downsample, data_type, pathmaster, binary)
-    
-    # # Preprocess SMOTE data
-    # train_loader, val_loader, test_loader = dataloader_smote.preprocess_data(smote_type, split, batch_size, standardize, img_channels, img_size,
-    #                                                                downsample, data_type, pathmaster, binary)
     
     # # Preprocess database data
     # test_loader = dataloader_database.preprocess_data(database, batch_size, standardize, img_channels, img_size, 
